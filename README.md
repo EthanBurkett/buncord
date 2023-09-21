@@ -56,7 +56,6 @@ import { Client } from "disbun";
 
 new Client({
   commandsDir: "src/commands",
-  eventsDir: "src/events",
   intents: ["Guilds", "GuildMessages", "MessageContent"], // Message content intent required if you're using prefixed commands
 }).login(process.env.BOT_TOKEN);
 ```
