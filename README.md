@@ -1,6 +1,10 @@
-# Buncord
+# Disbun
 
-Buncord is a discord js command handler optimized for speed by using native bun functions.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/709451/182802334-d9c42afe-f35d-4a7b-86ea-9985f73f20c3.png" width="200" />
+</p>
+
+disbun is a discord js command handler optimized for speed by using native bun functions.
 
 # Getting Started
 
@@ -25,18 +29,18 @@ npm i -g bun
 curl -fsSL https://bun.sh/install | bash
 ```
 
-## Installing Buncord CLI
+## Installing disbun CLI
 
 ```bash
-bun add --global buncord-cli
+bun add --global disbun-cli
 ```
 
 ## Initializing a project
 
-Starting a project with Buncord is easy. Just run the following command in your terminal:
+Starting a project with disbun is easy. Just run the following command in your terminal:
 
 ```sh
-buncord-cli
+disbun-cli
 ```
 
 # Now the good stuff
@@ -48,7 +52,7 @@ Now we'll go through setting up your client, adding commands, setting up middlew
 It's as simple as this:
 
 ```ts
-import { Client } from "buncord";
+import { Client } from "disbun";
 
 new Client({
   commandsDir: "src/commands",
@@ -60,7 +64,7 @@ new Client({
 ### All methods on the client class
 
 ```ts
-import { Client } from "buncord";
+import { Client } from "disbun";
 
 const client = new Client({
   commandsDir: "src/commands";
@@ -92,11 +96,11 @@ client.login(string);
 Adding commands are almost as easy as setting up the project, just use the following CLI command or create a file and copy the template below.
 
 ```sh
-buncord-cli add command commandName
+disbun-cli add command commandName
 ```
 
 ```ts
-import { Command, CommandType } from "buncord";
+import { Command, CommandType } from "disbun";
 
 export default {
   name: "ping",
@@ -111,7 +115,7 @@ export default {
 ### All command methods
 
 ```ts
-import { Command, CommandType } from "buncord";
+import { Command, CommandType } from "disbun";
 
 export default {
   name: "pong",
@@ -153,11 +157,11 @@ export default {
 Just like commands, adding events is easy. Not sure how many more times I can say that.
 
 ```sh
-buncord-cli add event eventName
+disbun-cli add event eventName
 ```
 
 ```ts
-import { Client } from "buncord";
+import { Client } from "disbun";
 
 export default (client: Client) => {
   client.on("event", () => {
@@ -175,9 +179,11 @@ Middleware is a way to run code before commands are executed. This is useful for
 `middleware/index.ts`
 
 ```ts
-import { IMiddlewareOptions, Middleware } from "buncord";
+import { IMiddlewareOptions, Middleware } from "disbun";
 
 export default async ({ client, interaction, message }: IMiddlewareOptions) => {
   if (interaction.isCommand()) return Middleware.SUCCESS;
 };
 ```
+
+> :warning: **This project is currently under development and not ready for a production environment**
