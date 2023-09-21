@@ -1,0 +1,22 @@
+{
+  "name": "buncord",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "nodemon": "^3.0.1"
+  },
+  "scripts": {
+    "dev": "clear&&nodemon",
+    "start": "clear&&bun test/index.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "discord.js": "^14.13.0",
+    "mongoose": "^7.5.2",
+    "zlib-sync": "^0.1.8"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "sourceMap": false,
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "types": [
+      "bun-types" // add Bun global
+    ]
+  },
+  "include": ["./src/**/*", "dist/index.js", "dist/Handlers/CommandHandler.js"],
+  "exclude": ["node_modules", "dist"]
+}
