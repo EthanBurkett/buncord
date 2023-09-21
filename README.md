@@ -96,7 +96,7 @@ client.login(string);
 Adding commands are almost as easy as setting up the project, just use the following CLI command or create a file and copy the template below.
 
 ```sh
-disbun-cli add command commandName
+disbun-cli add
 ```
 
 ```ts
@@ -157,7 +157,7 @@ export default {
 Just like commands, adding events is easy. Not sure how many more times I can say that.
 
 ```sh
-disbun-cli add event eventName
+disbun-cli add
 ```
 
 ```ts
