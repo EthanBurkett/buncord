@@ -15,9 +15,9 @@ with NodeJS. Support may come soon but for now, it is not supported.
 
 You will need to have bun installed globally on your machine.
 
-## Installing Bun {.tabset}
+## Installing Bun
 
-### Windows {.active}
+### Windows
 
 ```bash
 npm i -g bun
