@@ -12,6 +12,21 @@ import DiscordJS, {
   PermissionsString,
   User,
 } from "discord.js";
+
+declare module "discord.js" {
+  interface Client {
+    log: (...message: any[]) => void;
+    error: (...message: any[]) => void;
+    cache: {
+      prefixes: DiscordJS.Collection<string, string>;
+    };
+    middleware: (ctx: IMiddlewareOptions) => Promise<boolean>;
+  }
+  interface ClientEvents {
+    commandsReady: [];
+  }
+}
+
 export class Client extends DiscordJS.Client {
   constructor(
     options:
