@@ -70,7 +70,8 @@ export default class CommandLoader {
       if (!commands) return;
 
       const guildCommands = this.commands.filter(
-        (command) => command.guilds?.includes(guild.id) ?? false
+        (command) =>
+          command.testOnly ?? command.guilds?.includes(guild.id) ?? false
       );
 
       // delete commands that are not in the guildCommands
@@ -123,6 +124,7 @@ export default class CommandLoader {
             : this._options.testServers;
 
           for (const g of guilds!) {
+            if (!command || !command.name) return;
             await this._create({
               name: command.name,
               description: command.description,
