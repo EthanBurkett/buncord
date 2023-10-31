@@ -40,7 +40,7 @@ bun add --global disbun-cli
 Starting a project with disbun is easy. Just run the following command in your terminal:
 
 ```sh
-disbun-cli
+disbun
 ```
 
 # Now the good stuff
